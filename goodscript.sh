@@ -2,8 +2,9 @@
 
 #created by Yan Lin
 
-weekdays=(Mon Tue Wed Thu Fri Sat Sun)
-for (( i=0; i < 7; i++ ))
+read -p "enter file name: " FILE
+
+while read -r yanlin
 do
-	echo "day $(expr $i + 1) is: ${weekdays[$i]}"
-done
+	echo "in the file-> $yanlin"
+done < $FILE
